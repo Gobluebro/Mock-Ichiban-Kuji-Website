@@ -8,10 +8,9 @@ const Letter = (props: Props) => {
   const { letterValue, isLargeLetter } = props.prize;
 
   const largeLetterFont = "Italianno";
-  const normalLetterFont = "Arial";
 
   const spanStyle = {
-    fontFamily: isLargeLetter ? largeLetterFont : normalLetterFont,
+    fontFamily: isLargeLetter ? largeLetterFont : "",
     fontSize: isLargeLetter ? "100px" : "50px",
   };
 
