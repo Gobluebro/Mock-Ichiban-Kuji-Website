@@ -10,6 +10,8 @@ const Letter = (props: Props) => {
   const largeLetterFont = "Italianno";
 
   const spanStyle = {
+    width: isLargeLetter ? "100px" : "50px",
+    height: isLargeLetter ? "100px" : "50px",
     fontFamily: isLargeLetter ? largeLetterFont : "",
     fontSize: isLargeLetter ? "100px" : "50px",
   };

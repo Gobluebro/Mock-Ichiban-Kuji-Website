@@ -8,8 +8,14 @@ interface Props {
 const LetterGrid = (props: Props) => {
   const { prizes } = props;
 
+  const GridStyles = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+  };
+
   return (
-    <div>
+    <div style={GridStyles}>
       {prizes.map((prize, i) => (
         <Letter key={i} prize={prize} />
       ))}
