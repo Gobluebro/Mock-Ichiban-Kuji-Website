@@ -7,14 +7,15 @@ interface Props {
 const Letter = (props: Props) => {
   const { letterValue, isLargeLetter } = props.prize;
 
-  const largeLetterFont = "largeLetterFont";
-  const normalLetterFont = "normalLetterFont";
+  const largeLetterFont = "Italianno";
+  const normalLetterFont = "Arial";
 
   const spanStyle = {
     fontFamily: isLargeLetter ? largeLetterFont : normalLetterFont,
+    fontSize: isLargeLetter ? "100px" : "50px",
   };
 
-  return <span style={spanStyle}>{letterValue}</span>;
+  return <span style={spanStyle}>{letterValue.toUpperCase()}</span>;
 };
 
 export default Letter;

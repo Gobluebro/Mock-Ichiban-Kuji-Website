@@ -10,8 +10,8 @@ const LetterGrid = (props: Props) => {
 
   return (
     <div>
-      {prizes.map((prize) => (
-        <Letter prize={prize} />
+      {prizes.map((prize, i) => (
+        <Letter key={i} prize={prize} />
       ))}
     </div>
   );
