@@ -8,7 +8,7 @@ interface Props {
 const LetterGrid = (props: Props) => {
   const { prizes } = props;
 
-  const GridStyles = {
+  const GridStyles: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     gap: "10px",
