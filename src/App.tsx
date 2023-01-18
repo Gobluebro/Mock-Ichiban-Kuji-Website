@@ -1,4 +1,3 @@
-import "./App.css";
 import LetterGrid from "./components/Letters/LetterGrid/LetterGrid";
 
 const prizes = [
@@ -14,9 +13,9 @@ const prizes = [
 
 function App() {
   return (
-    <div className="App">
+    <main className="container">
       <LetterGrid prizes={prizes} />
-    </div>
+    </main>
   );
 }
 
