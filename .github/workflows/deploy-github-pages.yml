@@ -81,7 +81,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Download-screenshots
-          path: /screenshots/
+          path: ./screenshots
 
       - name: Add and commit
         uses: EndBug/add-and-commit@v9.1.1
