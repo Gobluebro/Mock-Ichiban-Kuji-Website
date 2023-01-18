@@ -1,11 +1,8 @@
 name: Dispatch screenshots-action workflow
 on:
-  workflow_dispatch:
-    inputs:
-      url:
-        description: "The website URL (ex: https://www.google.com/)"
-        required: true
-        default: ""
+  push:
+    branches:
+      - main
 
 jobs:
   screenshots:
@@ -19,7 +16,7 @@ jobs:
       - name: screenshots-ci-action
         uses: flameddd/screenshots-ci-action@master
         with:
-          url: ${{ github.event.inputs.url }}
+          url: https://gobluebro.github.io/Mock-Ichiban-Kuji-Website/
           devices: iPhone 13 Pro
       - uses: actions/upload-artifact@v2
         with:
@@ -35,3 +32,7 @@ jobs:
           name: Download-screenshots
       - name: Test artifact download
         run: ls -R
+      - name: Add and commit
+        uses: EndBug/add-and-commit@v9.1.1
+        with:
+          default_author: github_actions
