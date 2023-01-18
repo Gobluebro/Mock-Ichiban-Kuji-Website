@@ -64,6 +64,7 @@ jobs:
         uses: flameddd/screenshots-ci-action@master
         with:
           url: https://gobluebro.github.io/Mock-Ichiban-Kuji-Website/
+          noCommitHashFileName: true
 
       - uses: actions/upload-artifact@v3
         with:
