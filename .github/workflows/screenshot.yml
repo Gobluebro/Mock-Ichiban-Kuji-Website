@@ -17,8 +17,7 @@ jobs:
         uses: flameddd/screenshots-ci-action@master
         with:
           url: https://gobluebro.github.io/Mock-Ichiban-Kuji-Website/
-          devices: iPhone 13 Pro
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           path: screenshots
           name: Download-screenshots
@@ -32,6 +31,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Download-screenshots
+          path: ~/screenshots
       - name: Test artifact download
         run: ls -R
       - name: Add and commit
