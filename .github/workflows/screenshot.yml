@@ -32,6 +32,8 @@ jobs:
           name: Download-screenshots
       - name: Test artifact download
         run: ls -R
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - name: Add and commit
         uses: EndBug/add-and-commit@v9.1.1
         with:
