@@ -3,25 +3,35 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: 'The website URL (ex: https://www.google.com/)'
+        description: "The website URL (ex: https://www.google.com/)"
         required: true
-        default: ''
+        default: ""
 
 jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: install puppeteer-headful
-      uses: mujo-code/puppeteer-headful@master
-      env:
-        CI: 'true'
-    - name: screenshots-ci-action
-      uses: flameddd/screenshots-ci-action@master
-      with:
-        url: ${{ github.event.inputs.url }}
-        devices: iPhone 13 Pro
-    - uses: actions/upload-artifact@v2
-      with:
-        path: screenshots
-        name: Download-screenshots
+      - uses: actions/checkout@v2
+      - name: install puppeteer-headful
+        uses: mujo-code/puppeteer-headful@master
+        env:
+          CI: "true"
+      - name: screenshots-ci-action
+        uses: flameddd/screenshots-ci-action@master
+        with:
+          url: ${{ github.event.inputs.url }}
+          devices: iPhone 13 Pro
+      - uses: actions/upload-artifact@v2
+        with:
+          path: screenshots
+          name: Download-screenshots
+  download-screenshots:
+    runs-on: ubuntu-latest
+    needs: screenshots
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Download-screenshots
+      - name: Test artifact download
+        run: ls -R
