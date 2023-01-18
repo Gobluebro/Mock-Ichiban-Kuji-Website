@@ -20,6 +20,7 @@ jobs:
       uses: flameddd/screenshots-ci-action@master
       with:
         url: ${{ github.event.inputs.url }}
+        devices: iPhone 13 Pro
     - uses: actions/upload-artifact@v2
       with:
         path: screenshots
