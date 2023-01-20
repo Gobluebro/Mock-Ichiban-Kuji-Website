@@ -1,4 +1,5 @@
 import LetterGrid from "./components/Letters/LetterGrid/LetterGrid";
+import Navbar from "./components/NavBar/Navbar";
 
 const prizes = [
   { letterValue: "a", isLargeLetter: true },
@@ -13,9 +14,14 @@ const prizes = [
 
 function App() {
   return (
-    <main className="container">
-      <LetterGrid prizes={prizes} />
-    </main>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main className="container">
+        <LetterGrid prizes={prizes} />
+      </main>
+    </>
   );
 }
 
