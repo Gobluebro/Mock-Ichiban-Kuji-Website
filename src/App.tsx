@@ -1,16 +1,8 @@
 import LetterGrid from "./components/Letters/LetterGrid/LetterGrid";
 import Navbar from "./components/NavBar/Navbar";
+import { prizes } from "./data/PrizeData";
 
-const prizes = [
-  { letterValue: "a", isLargeLetter: true },
-  { letterValue: "b", isLargeLetter: true },
-  { letterValue: "c", isLargeLetter: true },
-  { letterValue: "d", isLargeLetter: true },
-  { letterValue: "e", isLargeLetter: false },
-  { letterValue: "f", isLargeLetter: false },
-  { letterValue: "g", isLargeLetter: false },
-  { letterValue: "h", isLargeLetter: false },
-];
+const pictures = prizes.map((prize) => prize.imageUrl);
 
 function App() {
   return (
