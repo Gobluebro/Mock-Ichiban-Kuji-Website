@@ -1,5 +1,6 @@
 import { PrizeType } from "../letterTypes";
 import Letter from "../Letter/Letter";
+import "./LetterGrid.css";
 
 interface Props {
   prizes: Array<PrizeType>;
@@ -8,14 +9,8 @@ interface Props {
 const LetterGrid = (props: Props) => {
   const { prizes } = props;
 
-  const GridStyles: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-  };
-
   return (
-    <div style={GridStyles}>
+    <div className={"grid"}>
       {prizes.map((prize, i) => (
         <Letter key={i} prize={prize} />
       ))}
