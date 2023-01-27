@@ -19,3 +19,23 @@
 .hidden {
   display: none;
 }
+
+.parent {
+  position: relative;
+}
+
+.button {
+  width: auto;
+  background-color: transparent;
+  position: absolute;
+}
+
+.arrow-left {
+  top: 50px;
+  left: 20px;
+}
+
+.arrow-right {
+  top: 50px;
+  right: 20px;
+}

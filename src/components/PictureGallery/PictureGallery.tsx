@@ -20,22 +20,24 @@ const PictureGallery = (props: Props) => {
       <div className="bigPicture">
         <img src={pictures[selectedImage]} />
       </div>
-      <button>
-        <Arrow color="#FFFFFF" rotation={180} />
-      </button>
-      <div className="imageGrid">
-        {pictures.map((picture, key) => (
-          <div
-            key={key}
-            className={"smallPicture " + (key < 4 ? "shown" : "hidden")}
-          >
-            <img src={picture} onClick={() => setSelectedImage(key)} />
-          </div>
-        ))}
+      <div className="parent">
+        <button className="button secondary arrow-left">
+          <Arrow color="#000000" rotation={180} />
+        </button>
+        <div className="imageGrid">
+          {pictures.map((picture, key) => (
+            <div
+              key={key}
+              className={"smallPicture " + (key < 4 ? "shown" : "hidden")}
+            >
+              <img src={picture} onClick={() => setSelectedImage(key)} />
+            </div>
+          ))}
+        </div>
+        <button className="button secondary arrow-right">
+          <Arrow color="#000000" />
+        </button>
       </div>
-      <button>
-        <Arrow color="#FFFFFF" />
-      </button>
     </>
   );
 };
