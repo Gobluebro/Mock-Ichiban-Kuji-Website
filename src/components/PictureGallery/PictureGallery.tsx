@@ -1,5 +1,6 @@
 import "./PictureGallery.css";
 import { useState } from "react";
+import Arrow from "../Arrow/Arrow";
 
 interface Props {
   pictures: Array<string>;
@@ -8,7 +9,7 @@ interface Props {
 const PictureGallery = (props: Props) => {
   const { pictures } = props;
 
-  const totalDisplayedImages = 4;
+  const totalDisplayedPictures = 4;
 
   const [selectedImage, setSelectedImage] = useState(0);
 
@@ -19,6 +20,9 @@ const PictureGallery = (props: Props) => {
       <div className="bigPicture">
         <img src={pictures[selectedImage]} />
       </div>
+      <button>
+        <Arrow color="#FFFFFF" rotation={180} />
+      </button>
       <div className="imageGrid">
         {pictures.map((picture, key) => (
           <div
@@ -29,6 +33,9 @@ const PictureGallery = (props: Props) => {
           </div>
         ))}
       </div>
+      <button>
+        <Arrow color="#FFFFFF" />
+      </button>
     </>
   );
 };
