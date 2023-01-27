@@ -1,15 +1,16 @@
 .smallPicture {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 .bigPicture {
-  height: 500px;
-  width: 500px;
+  height: 600px;
+  width: 600px;
 }
 
 .imageGrid {
   display: flex;
+  width: 600px;
 }
 
 .shown {
@@ -22,6 +23,7 @@
 
 .parent {
   position: relative;
+  width: 600px;
 }
 
 .button {
@@ -32,10 +34,10 @@
 
 .arrow-left {
   top: 50px;
-  left: 20px;
+  left: -100px;
 }
 
 .arrow-right {
   top: 50px;
-  right: 20px;
+  right: -100px;
 }
