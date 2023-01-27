@@ -1,0 +1,1 @@
+.grid{display:grid;grid-template-columns:auto auto}.smallPicture{height:150px;width:150px}.bigPicture{height:600px;width:600px}.imageGrid{display:flex;width:600px}.shown{display:block}.hidden{display:none}.parent{position:relative;width:600px}.button{width:auto;background-color:transparent;position:absolute}.arrow-left{top:50px;left:-100px}.arrow-right{top:50px;right:-100px}
